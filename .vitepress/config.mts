@@ -2,6 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base: "/devblog/",
   title: "developer blog for Symbol Not Found",
   description: "Updates on project progress and game releases!",
   themeConfig: {
