@@ -6,8 +6,8 @@
     "vue": "^3.4.27"
   },
   "scripts": {
-    "dev": "vitepress dev",
+    "dev": "vitepress dev --port 8088",
     "build": "vitepress build",
-    "preview": "vitepress preview"
+    "preview": "vitepress preview --port 8089"
   }
 }
