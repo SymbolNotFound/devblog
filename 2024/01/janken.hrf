@@ -1,0 +1,42 @@
+%% Janken, a.k.a. "Rock-Paper-Scissors" or Roshambo.
+
+%% A two-player game, players move simultaneously.
+role(left)
+role(right)
+
+%% Enumeration of available hand gestures.
+hand(ROCK)
+hand(PAPER)
+hand(SCISSORS)
+
+%% Their relative importance for victory conditions.
+better(PAPER, ROCK)
+better(SCISSORS, PAPER)
+better(ROCK, SCISSORS)
+
+%% The `show` relation connects a player to their hand selection.
+base(show(Role, Hand)) :- role(Role) & hand(Hand)
+
+%% Each player's only available move is to choose one of the hand gestures.
+input(Role, play(Hand)) :- role(Role) & hand(Hand)
+legal(Role, play(Hand)) :- role(Role) & hand(Hand)
+next(show(left, Hand)) :- does(left, play(Hand))
+next(show(right, Hand)) :- does(right, play(Hand))
+
+%% The game ends when players have played different hands.
+terminal :-
+  show(left, Lhand) &
+  show(right, Rhand) &
+  distinct(Lhand, Rhand)
+
+%% Game winnings are all-or-nothing, there is no 'draw' outcome
+goal(left, 100) :- win(left)
+goal(left, 0) :- win(right)
+goal(right, 100) :- win(right)
+goal(right, 0) :- win(left)
+
+%% Utility function for determining if a player role has won.
+win(Role) :- role(Role) &
+  role(Other) & distinct(Role, Other) &
+  show(Role, RHand) & show(Other, OHand) &
+  better(RHand, OHand)
