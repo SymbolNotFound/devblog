@@ -8,11 +8,11 @@ hero:
   tagline: const { markdown, vue } = useVitepress()
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: Why?
+      link: /2024/06/10.writing-for-public-consumption
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: Setting up VitePress
+      link: /2024/06/14.web-hosting-free-fast-good
 
 features:
   - title: Feaures, ooh!
@@ -23,3 +23,4 @@ features:
     details: this was made in about 5 minutes
 ---
 
+<recent-posts />

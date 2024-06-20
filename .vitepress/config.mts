@@ -1,11 +1,12 @@
-import { defineConfig } from 'vitepress'
 import { withMermaid } from 'vitepress-plugin-mermaid'
 
 // https://vitepress.dev/reference/site-config
 export default withMermaid({
-  base: "/devblog/",
-  title: "developer blog for Symbol Not Found",
-  description: "Updates on project progress and game releases!",
+  base: '/devblog/',
+  lang: 'en-US',
+  title: 'Symbol Not Found',
+  description: 'Updates on project progress and game releases!',
+  lastUpdated: true,
   mermaid: {
     er: {
       layoutDirection: 'TD',
@@ -22,24 +23,17 @@ export default withMermaid({
     }
   },
   themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
     ],
 
     sidebar: [
       {
-        text: 'Examples',
-        items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
-        ]
       }
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'github', link: 'https://github.com/SymbolNotFound/' }
     ]
   }
 })
