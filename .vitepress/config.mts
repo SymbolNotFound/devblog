@@ -2,7 +2,6 @@ import { withMermaid } from 'vitepress-plugin-mermaid'
 
 // https://vitepress.dev/reference/site-config
 export default withMermaid({
-  base: '/devblog/',
   lang: 'en-US',
   title: 'Symbol Not Found',
   description: 'Updates on project progress and game releases!',
