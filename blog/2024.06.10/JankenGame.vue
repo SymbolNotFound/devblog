@@ -63,7 +63,7 @@
   </div>
 </template>
 
-<style scoped>
+<style>
 .game {
   display: block;
   width: 97vw;

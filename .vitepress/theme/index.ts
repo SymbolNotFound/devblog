@@ -4,8 +4,8 @@ import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import './style.css'
 
-import JankenGame from './components/JankenGame.vue'
-import RecentPosts from './components/RecentPosts.vue'
+//import JankenGame from './components/JankenGame.vue'
+//import RecentPosts from './components/RecentPosts.vue'
 
 export default {
   extends: DefaultTheme,
@@ -16,8 +16,8 @@ export default {
   },
   enhanceApp({ app, router, siteData }) {
     // ...
-    app.component('janken-game', JankenGame)
-    app.component('recent-posts', RecentPosts)
+    // app.component('janken-game', JankenGame)
+    // app.component('recent-posts', RecentPosts)
     /*
     // Load all components in the theme's components directory
     const modules = import.meta.glob(

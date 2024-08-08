@@ -9,10 +9,13 @@ hero:
   actions:
     - theme: brand
       text: Why?
-      link: /2024/06/10.writing-for-public-consumption
+      link: /blog/2024.06.10.why-writing
     - theme: alt
-      text: Setting up VitePress
-      link: /2024/06/14.web-hosting-free-fast-good
+      text: How?
+      link: /blog/2024.06.14.web-hosting-free-fast-good
+    - theme: alt
+      text: What?
+      link: about
 
 features:
   - title: Feaures, ooh!
@@ -23,4 +26,6 @@ features:
     details: this was made in about 5 minutes
 ---
 
+<!--
 <recent-posts />
+-->
