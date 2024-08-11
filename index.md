@@ -7,13 +7,13 @@ hero:
   text: "a devblog"
   tagline: const { markdown, vue } = useVitepress()
   actions:
-    - theme: brand
+    - theme: alt
       text: Why?
       link: /blog/2024.06.10.why-writing
     - theme: alt
       text: How?
       link: /blog/2024.06.14.web-hosting-free-fast-good
-    - theme: alt
+    - theme: brand
       text: What?
       link: about
 
